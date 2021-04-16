@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Services.Spotify.HomeSpotifyActivity">
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_row_item_red"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="176dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Welcome"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/userButton"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_row_item_grey"
+        android:text="Find User Spotify"
+        app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playlistButton" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_row_item_green"
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/playlistButton"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_row_item_grey"
+        android:text="Playlist"
+        app:layout_constraintBottom_toTopOf="@+id/userButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_row_item_grey"
+        android:text="Search"
+        app:layout_constraintBottom_toTopOf="@+id/playlistButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

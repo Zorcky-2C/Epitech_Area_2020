@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.spotifyapp">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SpotifyPlaylist.SearchActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+        <activity android:name=".SpotifyPlaylist.PlaylistActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+
+        <activity android:name=".SpotifyPlaylist.PlaylistEditActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+
+        <activity android:name=".SpotifyPlaylist.PlaylistNewActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+
+        <activity android:name=".SpotifyPlaylist.TutorialActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+
+        <activity android:name=".SpotifyPlaylist.LoginSpotActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+        <activity android:name=".SpotifyPlaylist.SearchSpotifyPlaylistActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+        <activity android:name=".SpotifyPlaylist.ListPlaylistActivity"
+            android:parentActivityName=".SpotifyPlaylist.MainSpotifyPlaylistActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+        </activity>
+
+
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ProfilUserActivity" />
+        <activity android:name=".HomeSpotifyWidgetActivity" />
+        <activity android:name=".SettingsSpotifyActivity" />
+        <activity android:name=".HomeImgurWidgetActivity" />
+        <activity android:name=".SettingsImgurActivity" />
+        <activity android:name=".HomeFacebookWidgetActivity" />
+        <activity android:name=".SettingsFacebookActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Fun.DescriptionCine.DescriptionActivity" />
+        <activity android:name=".Fun.CineActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".Services.FacebookProfilActivity"></activity>
+        <activity android:name=".Services.FacebookShare" />
+        <activity android:name=".Services.Spotify.SpotifyUserActivity" />
+        <activity android:name=".Services.FacebookListActivity" />
+        <activity android:name=".Services.ImgurModel.MainActivityEpicture" />
+        <activity android:name=".Services.EpictureMain" />
+        <activity android:name=".Services.FavouriteImgur" />
+        <activity android:name=".Services.PaymentDetails" />
+        <activity android:name=".Services.PaypalActivity" />
+        <activity android:name=".Services.ProfileImgur" />
+        <activity android:name=".SpotifyPlaylist.MainSpotifyPlaylistActivity" />
+
+
+        <activity
+            android:name=".News.DetailCovidActivity"
+            android:parentActivityName=".News.DetailCovidActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".News.AllCountriesActivity"
+            android:parentActivityName=".News.CovidHomeActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".News.CovidHomeActivity" />
+        <activity android:name=".News.CovidActivity" />
+        <activity android:name=".News.WeatherActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider659382484942753"
+            android:exported="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+    </application>
+
+</manifest>

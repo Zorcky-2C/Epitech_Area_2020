@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_toolbar"/>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_ui"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:background="@drawable/bg_purpule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="20dp" >
+
+                        <TextView
+                            android:id="@+id/txtdashboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp"
+                            android:text="Imgur Widgets"
+                            android:textColor="#FFF"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/settingWidget"
+                            android:layout_width="82dp"
+                            android:layout_height="82dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/ic_add"
+                            android:background="@drawable/circle"
+                            android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:rowCount="3"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:alignmentMode="alignMargins"
+                        >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ImgurFavCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight = "1"
+                        android:layout_rowWeight = "1"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="12dp"
+                        android:layout_margin="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                        <ImageView
+                            android:src="@drawable/ic_favourite"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000"
+                            android:text="Favourite"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            
+                            android:id="@+id/ImgurFeedCase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/ic_imgur_button"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="Feed"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/ImgurProfileCase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/profil_imgur_user"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="Profile"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </GridLayout>
+                </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/main_nav_drawer"
+        android:background="@android:color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

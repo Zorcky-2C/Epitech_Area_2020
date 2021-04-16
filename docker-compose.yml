@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+    api:
+        build:
+            context: .
+            dockerfile: ./api/Dockerfile
+        ports:
+            - 8080:8080
+    web:
+        stdin_open: true
+        build:
+            context: ./area-web
+            dockerfile: ./Dockerfile
+        ports:
+            - 8081:3000
+        depends_on:
+            - api
